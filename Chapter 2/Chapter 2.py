@@ -107,14 +107,11 @@ print(f"The value of paycheck is {paycheck}, notice that there are no underscore
 # Here is some code that will initialize a list of strings and iterate over them to display some principals from Tim Peters' Zen of Python book
 # The formatting of this code is tightly coupled with the core logic, but it is fine for a trivial example
 
-maxims = ["Maxims from The Zen of Python, by Tim Peters", "Beutiful is better than ugly.", "Simple is better than complex.", "Complex is better than complicated.", "Readability counts.", "There should be one -- and preferably one -- obvious way to do it.", "Now is better than never."]
+title = "Maxims from The Zen of Python, by Tim Peters"
+maxims = ["Beutiful is better than ugly.", "Explicit is better than implicit.", "Simple is better than complex.", "Complex is better than complicated.", "Flat is better than nested.", "Sparse is better than dense.", "Readability counts.", "Special cases aren't special enough to break the rules.", "Practicality beats purity.", "Errors should never pass silently.", "Unless explicitly silenced.", "In the face of ambiguity, refuse the tempation to guess.", "There should be one -- and preferably one -- obvious way to do it.", "Now is better than never.", "Although never is often better than *right* now.", "If the implementation is hard to explain, it's a bad idea.", "If the implementation is easy to explain, it may be a good idea.", "Namespaces are one honking great idea -- let's do more of those!"]
 
-first_line = True 
+print("\n", end="")                 # print a newline
+print(title)                        # Print the title of the section
+
 for maxim in maxims :               # Loop over each string in the list of maxims
-    if(first_line == True) :        # If we are at the first line we need to print a newline character and the first maxim
-        print("")
-        print(maxim)
-        first_line = False          # Set our flag to know if we are at the first line or not
-    elif(first_line == False) :     # If we are not at the first line we should print a tab and the maxim
-        print(f"\t{maxim}")
-first_line = True
+    print(f"\t{maxim}")
